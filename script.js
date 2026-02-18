@@ -1,16 +1,18 @@
-// Section color mapping
+// Section color mapping — Stage 1: green/teal family, Stage 2: blue-purple family
 const sectionColors = {
-    'playlist-setup': '#8e44ad',
-    'superbowl-ad': '#3498db',
-    'bank-video': '#e74c3c',
-    'gifts': '#2ecc71',
-    'yt-tiktok': '#f39c12',
-    'hunt-site': '#1abc9c',
-    'lone-shark': '#9b59b6',
-    'crossword': '#34495e',
-    'by-car': '#e67e22',
-    'by-horse': '#16a085',
-    'by-plane': '#c0392b'
+    // Stage 1
+    'playlist-setup': '#0a6b5a',
+    'superbowl-ad':   '#1a9e8a',
+    'bank-video':     '#25c89c',
+    'gifts':          '#1aad5e',
+    'yt-tiktok':      '#2ecc71',
+    'hunt-site':      '#239b56',
+    'lone-shark':     '#148f77',
+    'crossword':      '#0e7a50',
+    // Stage 2
+    'by-car':   '#4a52d8',
+    'by-horse': '#7d35b0',
+    'by-plane': '#b039c4'
 };
 
 let map;
@@ -44,14 +46,22 @@ function initMap() {
     updateMapMarkers();
 }
 
+// Get ring color based on confidence
+function getConfidenceRingColor(confidence) {
+    if (confidence >= 90) return '#2ecc71';  // green
+    if (confidence >= 50) return '#f1c40f';  // yellow
+    return '#e74c3c';                         // red
+}
+
 // Create custom marker icon
 function createMarkerIcon(color, confidence) {
-    const size = confidence === 100 ? 14 : confidence >= 50 ? 12 : 10;
+    const size = 12;
+    const ringColor = getConfidenceRingColor(confidence);
     return L.divIcon({
         className: 'custom-div-icon',
-        html: `<div class="custom-marker" style="background-color: ${color}; width: ${size}px; height: ${size}px;"></div>`,
-        iconSize: [size, size],
-        iconAnchor: [size/2, size/2]
+        html: `<div class="custom-marker" style="background-color: ${color}; width: ${size}px; height: ${size}px; border-color: ${ringColor};"></div>`,
+        iconSize: [size + 4, size + 4],
+        iconAnchor: [(size + 4) / 2, (size + 4) / 2]
     });
 }
 
@@ -79,11 +89,11 @@ function updateMapMarkers() {
     document.querySelectorAll('.section-filter:checked').forEach(checkbox => {
         activeSections.add(checkbox.value);
     });
-    
+
     // Add markers for filtered puzzles
     puzzlesData.forEach(stage => {
         stage.sections.forEach(section => {
-            if (activeSections.size > 0 && !activeSections.has(section.id)) {
+            if (!activeSections.has(section.id)) {
                 return;
             }
             
@@ -124,57 +134,69 @@ function updateMapMarkers() {
 // Render puzzles list
 function renderPuzzles() {
     const container = document.getElementById('puzzles-list');
-    
+
     puzzlesData.forEach(stage => {
         const stageDiv = document.createElement('div');
         stageDiv.className = 'stage';
-        
+
         const stageTitle = document.createElement('h2');
         stageTitle.className = 'stage-title';
         stageTitle.textContent = stage.name;
         stageDiv.appendChild(stageTitle);
-        
+
         stage.sections.forEach(section => {
             const sectionDiv = document.createElement('div');
             sectionDiv.className = 'section';
-            
+
             const solved = section.puzzles.filter(p => p.status === 'solved').length;
             const confident = section.puzzles.filter(p => p.confidence >= 90).length;
             const total = section.puzzles.length;
-            
-            sectionDiv.innerHTML = `
-                <div class="section-header">
+
+            const header = document.createElement('div');
+            header.className = 'section-header';
+            header.innerHTML = `
+                <div class="section-header-left">
+                    <span class="section-arrow">▾</span>
                     <h3 class="section-title">${section.name}</h3>
-                    <div class="section-stats">${solved}/${total} solved, ${confident}/${total} confident</div>
                 </div>
+                <div class="section-stats">${solved}/${total} solved, ${confident}/${total} confident</div>
             `;
-            
-            section.puzzles.forEach(puzzle => {
-                const puzzleDiv = createPuzzleElement(puzzle, section.id);
-                sectionDiv.appendChild(puzzleDiv);
+            header.addEventListener('click', () => {
+                sectionDiv.classList.toggle('collapsed');
             });
-            
+            sectionDiv.appendChild(header);
+
+            const puzzlesDiv = document.createElement('div');
+            puzzlesDiv.className = 'section-puzzles';
+
+            section.puzzles.forEach((puzzle, idx) => {
+                const namePrefix = section.id === 'bank-video' ? `SCREEN ${idx + 1} / ` : '';
+                const puzzleDiv = createPuzzleElement(puzzle, section.id, namePrefix);
+                puzzlesDiv.appendChild(puzzleDiv);
+            });
+
+            sectionDiv.appendChild(puzzlesDiv);
             stageDiv.appendChild(sectionDiv);
         });
-        
+
         container.appendChild(stageDiv);
     });
 }
 
 // Create puzzle element
-function createPuzzleElement(puzzle, sectionId) {
+function createPuzzleElement(puzzle, sectionId, namePrefix = '') {
     const div = document.createElement('div');
     div.className = `puzzle ${puzzle.status}`;
-    
+
     const confBadge = getConfidenceBadge(puzzle.confidence);
     const statusBadge = puzzle.status === 'solved' ? 'Solved' : 'Unsolved';
-    
-    const answer = puzzle.answer 
+
+    const answer = puzzle.answer
         ? `<div class="puzzle-answer">${puzzle.answer}</div>`
         : `<div class="puzzle-answer pending">Answer pending</div>`;
-    
+
     const explanationId = `exp-${sectionId}-${puzzle.id}`;
-    
+
     let explanationHtml = '';
     if (puzzle.explanation) {
         if (puzzle.status === 'solved') {
@@ -190,22 +212,31 @@ function createPuzzleElement(puzzle, sectionId) {
             explanationHtml = `<div class="puzzle-explanation">${puzzle.explanation}</div>`;
         }
     }
-    
+
     let hintsHtml = '';
     if (puzzle.hints && puzzle.hints.length > 0) {
-        hintsHtml = `
+        const hintsId = `hints-${sectionId}-${puzzle.id}`;
+        const hideHints = puzzle.confidence >= 90;
+        hintsHtml = hideHints ? `
+            <button class="toggle-explanation" onclick="toggleExplanation('${hintsId}')">
+                Show hints
+            </button>
+            <div id="${hintsId}" class="explanation-content">
+                <div class="puzzle-hints">
+                    <ul>${puzzle.hints.map(hint => `<li>${hint}</li>`).join('')}</ul>
+                </div>
+            </div>
+        ` : `
             <div class="puzzle-hints">
                 <h4>Hints:</h4>
-                <ul>
-                    ${puzzle.hints.map(hint => `<li>${hint}</li>`).join('')}
-                </ul>
+                <ul>${puzzle.hints.map(hint => `<li>${hint}</li>`).join('')}</ul>
             </div>
         `;
     }
-    
+
     div.innerHTML = `
         <div class="puzzle-header">
-            <div class="puzzle-name">${puzzle.name}</div>
+            <div class="puzzle-name">${namePrefix ? `<span class="screen-prefix">${namePrefix}</span>` : ''}${puzzle.name}</div>
             <div class="puzzle-badges">
                 <span class="badge badge-status ${puzzle.status}">${statusBadge}</span>
                 <span class="badge badge-confidence ${confBadge.class}">${confBadge.text}</span>
@@ -215,7 +246,7 @@ function createPuzzleElement(puzzle, sectionId) {
         ${explanationHtml}
         ${hintsHtml}
     `;
-    
+
     return div;
 }
 
@@ -247,43 +278,67 @@ function toggleExplanation(id) {
 
 // Setup filter controls
 function setupFilters() {
-    // Create section filter checkboxes
-    const sectionFiltersDiv = document.getElementById('section-filters');
-    const sections = new Map();
-    
     puzzlesData.forEach(stage => {
+        const filterDiv = document.getElementById(`section-filters-${stage.id}`);
+        const stageCheckboxId = `filter-${stage.id}`;
+
         stage.sections.forEach(section => {
-            sections.set(section.id, section.name);
+            const label = document.createElement('label');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.className = 'section-filter';
+            checkbox.value = section.id;
+            checkbox.dataset.stage = stage.id;
+            checkbox.checked = true;
+            checkbox.addEventListener('change', () => {
+                updateStageCheckbox(stageCheckboxId, stage.id);
+                updateMapMarkers();
+            });
+
+            const colorBox = document.createElement('span');
+            colorBox.className = 'filter-color-box';
+            colorBox.style.backgroundColor = sectionColors[section.id] || '#666';
+
+            label.appendChild(checkbox);
+            label.appendChild(colorBox);
+            label.appendChild(document.createTextNode(section.name));
+            filterDiv.appendChild(label);
+        });
+
+        document.getElementById(stageCheckboxId).addEventListener('change', function() {
+            toggleStage(stage.id, this.checked);
         });
     });
-    
-    sections.forEach((name, id) => {
-        const label = document.createElement('label');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.className = 'section-filter';
-        checkbox.value = id;
-        checkbox.checked = true;
-        checkbox.addEventListener('change', updateMapMarkers);
-        
-        const colorBox = document.createElement('span');
-        colorBox.style.display = 'inline-block';
-        colorBox.style.width = '12px';
-        colorBox.style.height = '12px';
-        colorBox.style.backgroundColor = sectionColors[id] || '#666';
-        colorBox.style.marginRight = '6px';
-        colorBox.style.borderRadius = '2px';
-        
-        label.appendChild(checkbox);
-        label.appendChild(colorBox);
-        label.appendChild(document.createTextNode(name));
-        sectionFiltersDiv.appendChild(label);
+
+    // Confidence filter listeners
+    ['filter-high', 'filter-medium', 'filter-low'].forEach(id => {
+        document.getElementById(id).addEventListener('change', updateMapMarkers);
     });
-    
-    // Add event listeners for confidence filters
-    document.getElementById('filter-high').addEventListener('change', updateMapMarkers);
-    document.getElementById('filter-medium').addEventListener('change', updateMapMarkers);
-    document.getElementById('filter-low').addEventListener('change', updateMapMarkers);
+}
+
+// Toggle all sections within a stage
+function toggleStage(stageId, checked) {
+    document.querySelectorAll(`.section-filter[data-stage="${stageId}"]`).forEach(cb => {
+        cb.checked = checked;
+    });
+    updateMapMarkers();
+}
+
+// Sync stage checkbox state (checked / unchecked / indeterminate)
+function updateStageCheckbox(checkboxId, stageId) {
+    const stageCheckbox = document.getElementById(checkboxId);
+    const sectionCheckboxes = document.querySelectorAll(`.section-filter[data-stage="${stageId}"]`);
+    const checkedCount = Array.from(sectionCheckboxes).filter(cb => cb.checked).length;
+
+    if (checkedCount === 0) {
+        stageCheckbox.checked = false;
+        stageCheckbox.indeterminate = false;
+    } else if (checkedCount === sectionCheckboxes.length) {
+        stageCheckbox.checked = true;
+        stageCheckbox.indeterminate = false;
+    } else {
+        stageCheckbox.indeterminate = true;
+    }
 }
 
 // Make toggleExplanation globally accessible

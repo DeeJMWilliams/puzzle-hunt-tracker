@@ -59,34 +59,83 @@ h3 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-#map {
-    height: 500px;
-    border-radius: 4px;
+.map-container {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
     margin-top: 15px;
 }
 
-.map-controls {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+.map-sidebar {
+    width: 155px;
+    flex-shrink: 0;
+    font-size: 12px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#map {
+    flex: 1;
+    height: 500px;
+    border-radius: 4px;
 }
 
 .filter-group {
-    flex: 1;
-    min-width: 250px;
+    margin-bottom: 14px;
+}
+
+.filter-group h4 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6c757d;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.stage-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.stage-toggle-label strong {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #4a5568;
+}
+
+.section-filter-list {
+    padding-left: 4px;
 }
 
 .filter-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
     cursor: pointer;
+    line-height: 1.3;
 }
 
 .filter-group input[type="checkbox"] {
-    margin-right: 8px;
+    flex-shrink: 0;
     cursor: pointer;
+}
+
+.filter-color-box {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    flex-shrink: 0;
 }
 
 /* Puzzles Section */
@@ -117,10 +166,32 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.section-header:hover {
+    background-color: #f0f2f4;
+}
+
+.section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-arrow {
+    font-size: 16px;
+    color: #6c757d;
+    transition: transform 0.15s ease;
+    line-height: 1;
+}
+
+.section.collapsed .section-arrow {
+    transform: rotate(-90deg);
 }
 
 .section-title {
@@ -131,6 +202,21 @@ h3 {
 .section-stats {
     font-size: 14px;
     color: #6c757d;
+}
+
+.section-puzzles {
+    margin-top: 15px;
+}
+
+.section.collapsed .section-puzzles {
+    display: none;
+}
+
+.screen-prefix {
+    font-weight: 400;
+    color: #6c757d;
+    font-size: 13px;
+    margin-right: 2px;
 }
 
 .puzzle {
@@ -287,26 +373,11 @@ h3 {
     display: block;
 }
 
-/* Section colors for map markers */
-.marker-playlist-setup { background-color: #8e44ad; }
-.marker-superbowl-ad { background-color: #3498db; }
-.marker-bank-video { background-color: #e74c3c; }
-.marker-gifts { background-color: #2ecc71; }
-.marker-yt-tiktok { background-color: #f39c12; }
-.marker-hunt-site { background-color: #1abc9c; }
-.marker-lone-shark { background-color: #9b59b6; }
-.marker-crossword { background-color: #34495e; }
-.marker-by-car { background-color: #e67e22; }
-.marker-by-horse { background-color: #16a085; }
-.marker-by-plane { background-color: #c0392b; }
-
-/* Leaflet marker customization */
+/* Leaflet marker customization — border-color set inline by confidence */
 .custom-marker {
-    width: 12px;
-    height: 12px;
     border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border: 2px solid;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 /* Responsive */
@@ -315,11 +386,24 @@ h3 {
         flex-direction: column;
         gap: 10px;
     }
-    
-    .map-controls {
+
+    .map-container {
         flex-direction: column;
     }
-    
+
+    .map-sidebar {
+        width: 100%;
+        max-height: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .filter-group {
+        flex: 1;
+        min-width: 140px;
+    }
+
     #map {
         height: 400px;
     }

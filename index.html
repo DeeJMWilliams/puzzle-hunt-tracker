@@ -17,19 +17,31 @@
             <!-- Map Section -->
             <section class="map-section">
                 <h2>Location Map</h2>
-                <div class="map-controls">
-                    <div class="filter-group">
-                        <h3>Confidence Level</h3>
-                        <label><input type="checkbox" id="filter-high" checked> High/100% only</label>
-                        <label><input type="checkbox" id="filter-medium" checked> Medium (50-89%)</label>
-                        <label><input type="checkbox" id="filter-low" checked> Low (1-49%)</label>
+                <div class="map-container">
+                    <div class="map-sidebar">
+                        <div class="filter-group">
+                            <h4>Confidence</h4>
+                            <label><input type="checkbox" id="filter-high" checked> High (90%+)</label>
+                            <label><input type="checkbox" id="filter-medium" checked> Med (50-89%)</label>
+                            <label><input type="checkbox" id="filter-low" checked> Low (1-49%)</label>
+                        </div>
+                        <div class="filter-group">
+                            <label class="stage-toggle-label">
+                                <input type="checkbox" id="filter-stage1" checked>
+                                <strong>Stage 1</strong>
+                            </label>
+                            <div id="section-filters-stage1" class="section-filter-list"></div>
+                        </div>
+                        <div class="filter-group">
+                            <label class="stage-toggle-label">
+                                <input type="checkbox" id="filter-stage2" checked>
+                                <strong>Stage 2</strong>
+                            </label>
+                            <div id="section-filters-stage2" class="section-filter-list"></div>
+                        </div>
                     </div>
-                    <div class="filter-group">
-                        <h3>Sections</h3>
-                        <div id="section-filters"></div>
-                    </div>
+                    <div id="map"></div>
                 </div>
-                <div id="map"></div>
             </section>
 
             <!-- Puzzles List Section -->
