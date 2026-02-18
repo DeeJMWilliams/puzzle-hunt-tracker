@@ -1,14 +1,14 @@
 // Section color mapping — Stage 1: green/teal family, Stage 2: blue-purple family
 const sectionColors = {
-    // Stage 1
-    'playlist-setup': '#0a6b5a',
-    'superbowl-ad':   '#1a9e8a',
-    'bank-video':     '#25c89c',
-    'gifts':          '#1aad5e',
-    'yt-tiktok':      '#2ecc71',
-    'hunt-site':      '#239b56',
-    'lone-shark':     '#148f77',
-    'crossword':      '#0e7a50',
+    // Stage 1 — hue stepped from forest-green (~130°) to cyan-teal (~178°), light/dark alternating
+    'playlist-setup': '#0a4a1c',   // very dark forest green
+    'superbowl-ad':   '#22c55e',   // vivid bright green
+    'bank-video':     '#134e4a',   // very dark teal
+    'gifts':          '#14b8a6',   // vivid teal
+    'yt-tiktok':      '#166534',   // dark rich green
+    'hunt-site':      '#4ade80',   // light bright green
+    'lone-shark':     '#0f766e',   // dark teal-green
+    'crossword':      '#16a34a',   // medium green
     // Stage 2
     'by-car':   '#4a52d8',
     'by-horse': '#7d35b0',
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
     initMap();
     renderPuzzles();
+    renderTOC();
     setupFilters();
 });
 
@@ -147,6 +148,7 @@ function renderPuzzles() {
         stage.sections.forEach(section => {
             const sectionDiv = document.createElement('div');
             sectionDiv.className = 'section';
+            sectionDiv.id = `section-${section.id}`;
 
             const solved = section.puzzles.filter(p => p.status === 'solved').length;
             const confident = section.puzzles.filter(p => p.confidence >= 90).length;
@@ -274,6 +276,45 @@ function toggleExplanation(id) {
     button.textContent = element.classList.contains('visible') 
         ? 'Hide explanation' 
         : 'Show explanation';
+}
+
+// Render table of contents
+function renderTOC() {
+    const toc = document.getElementById('toc-sidebar');
+
+    puzzlesData.forEach(stage => {
+        const stageGroup = document.createElement('div');
+        stageGroup.className = 'toc-stage';
+
+        const stageHeading = document.createElement('div');
+        stageHeading.className = 'toc-stage-heading';
+        stageHeading.textContent = stage.name;
+        stageGroup.appendChild(stageHeading);
+
+        stage.sections.forEach(section => {
+            const link = document.createElement('a');
+            link.className = 'toc-link';
+            link.href = `#section-${section.id}`;
+            link.textContent = section.name;
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.getElementById(`section-${section.id}`);
+                if (target) {
+                    target.classList.remove('collapsed');
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            const dot = document.createElement('span');
+            dot.className = 'toc-dot';
+            dot.style.backgroundColor = sectionColors[section.id] || '#666';
+            link.prepend(dot);
+
+            stageGroup.appendChild(link);
+        });
+
+        toc.appendChild(stageGroup);
+    });
 }
 
 // Setup filter controls
