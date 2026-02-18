@@ -203,7 +203,7 @@
             },
             {
               "id": "bank-title-signs",
-              "name": "Title Signs + ballerina/spider",
+              "name": "Signs + ballerina/spider",
               "status": "solved",
               "answer": "ANKARA, TURKEY",
               "confidence": 100,
@@ -280,7 +280,7 @@
             },
             {
               "id": "bank-rubiks-cube",
-              "name": "Title n3=n2/Rubik's cube",
+              "name": "n3=n2/Rubik's cube",
               "status": "solved",
               "answer": "MOSCOW, RUSSIA",
               "confidence": 100,
