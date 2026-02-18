@@ -4,6 +4,73 @@
     box-sizing: border-box;
 }
 
+/* Password gate */
+#password-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f6f7;
+}
+
+.password-box {
+    background: white;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    text-align: center;
+    width: 320px;
+}
+
+.password-box h2 {
+    margin-bottom: 8px;
+}
+
+.password-box p {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.password-box input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.password-box input[type="password"]:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25,118,210,0.15);
+}
+
+.password-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.password-box button:hover {
+    background-color: #1565c0;
+}
+
+#password-error {
+    display: none;
+    color: #c62828;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
