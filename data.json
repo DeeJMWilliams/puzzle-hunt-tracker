@@ -619,6 +619,26 @@
               "explanation": "'Christmas Capital of the Plains' is more attested as a nickname for Fort Morgan but there don't seem to be better options.",
               "location": {"lat": 40.2503, "lng": -103.7999},
               "hints": []
+            },
+            {
+              "id": "car-inclinometer",
+              "name": "Inclinometer",
+              "status": "solved",
+              "answer": "SURAT, INDIA",
+              "confidence": 100,
+              "explanation": "Diamond City of India",
+              "location": {"lat": 21.1702, "lng": 72.8311},
+              "hints": []
+            },
+            {
+              "id": "car-marimbaphone",
+              "name": "Marimbaphone",
+              "status": "solved",
+              "answer": "MARQUETTE, MICHIGAN, USA",
+              "confidence": 100,
+              "explanation": "Queen City of the North",
+              "location": {"lat": 46.5436, "lng": -87.3954},
+              "hints": []
             }
           ]
         },
@@ -654,6 +674,26 @@
               "confidence": 100,
               "explanation": "From towers.decoder.models",
               "location": {"lat": 48.9745, "lng": 14.4743},
+              "hints": []
+            },
+            {
+              "id": "horse-lachrymiform",
+              "name": "Lachrymiform",
+              "status": "solved",
+              "answer": "CHRISTCHURCH, NEW ZEALAND",
+              "confidence": 100,
+              "explanation": "From driven.hint.improving",
+              "location": {"lat": -43.5321, "lng": 172.6362},
+              "hints": []
+            },
+            {
+              "id": "horse-laevoduction",
+              "name": "Laevoduction",
+              "status": "solved",
+              "answer": "CASTELO BRANCO, PORTUGAL",
+              "confidence": 100,
+              "explanation": "From dusts.enigma.desks",
+              "location": {"lat": 39.8236, "lng": -7.4944},
               "hints": []
             }
           ]
@@ -710,6 +750,36 @@
               "confidence": 100,
               "explanation": "",
               "location": {"lat": -17.3167, "lng": 123.65},
+              "hints": []
+            },
+            {
+              "id": "plane-exanguinous",
+              "name": "Exanguinous",
+              "status": "solved",
+              "answer": "MANAUS, BRAZIL",
+              "confidence": 100,
+              "explanation": "Outside the Museu da Amazonas",
+              "location": {"lat": -3.1190, "lng": -60.0217},
+              "hints": []
+            },
+            {
+              "id": "plane-lampadephore",
+              "name": "Lampadephore",
+              "status": "solved",
+              "answer": "PUNE, INDIA",
+              "confidence": 100,
+              "explanation": "Outside Ohel David Synagogue",
+              "location": {"lat": 18.5204, "lng": 73.8567},
+              "hints": []
+            },
+            {
+              "id": "plane-ligniperdous",
+              "name": "Ligniperdous",
+              "status": "solved",
+              "answer": "HASIK, OMAN",
+              "confidence": 100,
+              "explanation": "Natif Waterfalls",
+              "location": {"lat": 17.3706, "lng": 55.2848},
               "hints": []
             }
           ]
