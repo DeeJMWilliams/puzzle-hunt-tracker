@@ -202,6 +202,16 @@
               "hints": []
             },
             {
+              "id": "bank-title-signs",
+              "name": "Title Signs + ballerina/spider",
+              "status": "solved",
+              "answer": "ANKARA, TURKEY",
+              "confidence": 100,
+              "explanation": "The shared letters between 'Tank/Bank' and 'Arachnid/Arabesque'",
+              "location": {"lat": 39.9334, "lng": 32.8597},
+              "hints": []
+            },
+            {
               "id": "bank-birds",
               "name": "Birds on a wire + coffee cup",
               "status": "solved",
@@ -266,6 +276,16 @@
               "confidence": 75,
               "explanation": "The weight given is equivalent to 4,081 pennies (this step is confirmed by a hint). The city of Lincoln, Nebraska is located at latitude 40.81 and fits the theme of the top hat and pennies. Another possible answer is Doha, Qatar, based on the interpretation of A1Z26 giving D-zero-H-A.",
               "location": {"lat": 40.8136, "lng": -96.7026},
+              "hints": []
+            },
+            {
+              "id": "bank-rubiks-cube",
+              "name": "Title n3=n2/Rubik's cube",
+              "status": "solved",
+              "answer": "MOSCOW, RUSSIA",
+              "confidence": 100,
+              "explanation": "Turn cube into square -- there is an all-red Rubik's cube featured in the video, and Red Square is a landmark in Moscow",
+              "location": {"lat": 55.7558, "lng": 37.6173},
               "hints": []
             }
           ]
