@@ -22,7 +22,7 @@
         },
         {
           "id": "superbowl-ad",
-          "name": "Contained in Superbowl Ad",
+          "name": "Superbowl Ad",
           "puzzles": [
             {
               "id": "sb-vault-door",
@@ -588,7 +588,7 @@
       "sections": [
         {
           "id": "by-car",
-          "name": "By Car Rebus Puzzles",
+          "name": "Car (Rebus)",
           "puzzles": [
             {
               "id": "car-barodynamics",
@@ -664,7 +664,7 @@
         },
         {
           "id": "by-horse",
-          "name": "By Horse Cryptic Puzzles",
+          "name": "Horse (Cryptic)",
           "puzzles": [
             {
               "id": "horse-aberuncators",
@@ -720,7 +720,7 @@
         },
         {
           "id": "by-plane",
-          "name": "By Plane Geoguessr Puzzles",
+          "name": "Plane (Geoguessr)",
           "puzzles": [
             {
               "id": "plane-aboutsledges",

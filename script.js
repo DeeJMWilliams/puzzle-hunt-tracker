@@ -17,6 +17,7 @@ const sectionColors = {
 
 let map;
 let markers = [];
+let stage2Polyline = null;
 let puzzlesData = [];
 
 // Initialize
@@ -387,6 +388,9 @@ function setupFilters() {
     ['filter-high', 'filter-medium', 'filter-low'].forEach(id => {
         document.getElementById(id).addEventListener('change', updateMapMarkers);
     });
+
+    // Stage 2 path overlay toggle
+    document.getElementById('toggle-stage2-path').addEventListener('change', updateStage2Path);
 }
 
 // Toggle all sections within a stage
@@ -412,6 +416,38 @@ function updateStageCheckbox(checkboxId, stageId) {
     } else {
         stageCheckbox.indeterminate = true;
     }
+}
+
+// Draw or remove the Stage 2 path (all Stage 2 locations sorted A→Z by name)
+function updateStage2Path() {
+    if (stage2Polyline) {
+        map.removeLayer(stage2Polyline);
+        stage2Polyline = null;
+    }
+
+    if (!document.getElementById('toggle-stage2-path').checked) return;
+
+    const stage2 = puzzlesData.find(s => s.id === 'stage2');
+    if (!stage2) return;
+
+    const points = [];
+    stage2.sections.forEach(section => {
+        section.puzzles.forEach(puzzle => {
+            if (puzzle.location) {
+                points.push({ name: puzzle.name, lat: puzzle.location.lat, lng: puzzle.location.lng });
+            }
+        });
+    });
+
+    points.sort((a, b) => a.name.localeCompare(b.name));
+    if (points.length < 2) return;
+
+    stage2Polyline = L.polyline(points.map(p => [p.lat, p.lng]), {
+        color: '#f59e0b',
+        weight: 2,
+        opacity: 0.85,
+        dashArray: '6, 8'
+    }).addTo(map);
 }
 
 // Make toggleExplanation globally accessible
