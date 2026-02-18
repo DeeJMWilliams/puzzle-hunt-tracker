@@ -214,11 +214,11 @@
             {
               "id": "bank-ear",
               "name": "Ear + license plate + pirate",
-              "status": "unsolved",
-              "answer": null,
-              "confidence": 0,
-              "explanation": "Linked parts include a Kansas license plate 'IPESIT' on a tank and a billboard with a picture of a parrot and the text 'Talk Like a Pirate Day, September 19.' The bank screen has an ear + sound icon plus five blanks with a crossed-out T in the second position. This suggests removing a T from the second position of a five-letter word either before or after the homophone step.",
-              "location": null,
+              "status": "solved",
+              "answer": "SUKKUR, PAKISTAN",
+              "confidence": 90,
+              "explanation": "IPESIT refers to the first letters of the MrBeast YouTube short 'I Paid Everyone Stuck In Traffic.' The word 'stuck' with the T deleted becomes 'suck,' and adding 'R' (clued by talk like a pirate) gives 'SUCKR' which homophones to Sukkur.",
+              "location": {"lat": 27.7052, "lng": 68.8574},
               "hints": [
                 "You'll need an addition, a deletion, and a homophone in some order. One of those refers to a specific MrBeast video."
               ]
@@ -322,6 +322,56 @@
               "confidence": 100,
               "explanation": "The remaining pieces at the end of the game in value order (kings worth zero), white before black, spells 'Buffalo' with the cipher provided in the video.",
               "location": {"lat": 42.8864, "lng": -78.8784},
+              "hints": []
+            },
+            {
+              "id": "gift-airrack",
+              "name": "Airrack's gift",
+              "status": "solved",
+              "answer": "ALGIERS, ALGERIA",
+              "confidence": 90,
+              "explanation": "The numbers are indices into words/phrases indicated by the images that contain 'Eric.' Using the left side of the split indices gives ALGIERS, using the right side gives ALGERIA.",
+              "location": {"lat": 36.7372, "lng": 3.0863},
+              "hints": []
+            },
+            {
+              "id": "gift-sketch",
+              "name": "Sketch's gift",
+              "status": "solved",
+              "answer": "TAMPA BAY, FLORIDA, USA",
+              "confidence": 100,
+              "explanation": "'Angry lair' clues 'Madden,' and each player shown achieved the '99 club' in the Madden NFL game series in a single year. A1Z26ing the years gives BUCS HOME, and Tampa Bay is the home of the Buccaneers NFL team.",
+              "location": {"lat": 27.9506, "lng": -82.4572},
+              "hints": []
+            },
+            {
+              "id": "gift-fallon",
+              "name": "Jimmy Fallon's gift",
+              "status": "solved",
+              "answer": "WICHITA, KANSAS, USA",
+              "confidence": 100,
+              "explanation": "A puzzle shown in the background of a Fallon video on Youtube spells 'Jimmy's birthplace' when assembled. A clue confirms the Jimmy in question should be interpreted as Mr. Beast, not Fallon.",
+              "location": {"lat": 37.6872, "lng": -97.3301},
+              "hints": []
+            },
+            {
+              "id": "gift-quackity",
+              "name": "Quackity's gift",
+              "status": "solved",
+              "answer": "TIERRA DEL FUEGO",
+              "confidence": 100,
+              "explanation": "The sword has pigpen characters spelling a clue phrase in Spanish asking for the Tierra Del Fuego archipelago.",
+              "location": {"lat": -54.8019, "lng": -68.3030},
+              "hints": []
+            },
+            {
+              "id": "gift-haileebaylee",
+              "name": "Haileebaylee's gift",
+              "status": "solved",
+              "answer": "DEKALB, ILLINOIS, USA",
+              "confidence": 100,
+              "explanation": "The rings shown are birthstones. Taking the months of those birthstones and A1Z26ing the numerical value of the month spells DeKalb, IL.",
+              "location": {"lat": 41.9295, "lng": -88.7506},
               "hints": []
             },
             {
