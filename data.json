@@ -1,0 +1,670 @@
+{
+  "stages": [
+    {
+      "id": "stage1",
+      "name": "Stage 1",
+      "sections": [
+        {
+          "id": "playlist-setup",
+          "name": "Playlist Setup",
+          "puzzles": [
+            {
+              "id": "playlist-1",
+              "name": "Playlist puzzle",
+              "status": "solved",
+              "answer": "MAPUTO, MOZAMBIQUE",
+              "confidence": 100,
+              "explanation": "First letters of words in sentence in playlist comment on Youtube video",
+              "location": {"lat": -25.9655, "lng": 32.5832},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "superbowl-ad",
+          "name": "Contained in Superbowl Ad",
+          "puzzles": [
+            {
+              "id": "sb-vault-door",
+              "name": "Vault Door",
+              "status": "solved",
+              "answer": "ACCRA, GHANA",
+              "confidence": 100,
+              "explanation": "Sections on the door are scrabble scores that each only correspond to one possible Scrabble-legal word. Underlined portions spell a clue phrase",
+              "location": {"lat": 5.6037, "lng": -0.1870},
+              "hints": []
+            },
+            {
+              "id": "sb-belt",
+              "name": "Belt",
+              "status": "solved",
+              "answer": "LIMA, PERU",
+              "confidence": 100,
+              "explanation": "Belt worn by Jimmy in the video is shown more clearly in the BTS photos, letters are encoded via a numerical cipher featured in an existing Mr Beast video",
+              "location": {"lat": -12.0464, "lng": -77.0428},
+              "hints": []
+            },
+            {
+              "id": "sb-clipboard",
+              "name": "Clipboard",
+              "status": "solved",
+              "answer": "KUPANG, INDONESIA",
+              "confidence": 100,
+              "explanation": "Video shows holes in the back of the clipboard which align with the text CAPITAL OF EAST NUSA TENGGARA on the document shown in the BTS photo.",
+              "location": {"lat": -10.1718, "lng": 123.6075},
+              "hints": []
+            },
+            {
+              "id": "sb-flashing-lights",
+              "name": "Flashing lights",
+              "status": "solved",
+              "answer": "KABUL, AFGHANISTAN",
+              "confidence": 100,
+              "explanation": "Morse code of flashing light (read as when the light is off, rather than on) spells KABUL",
+              "location": {"lat": 34.5553, "lng": 69.2075},
+              "hints": []
+            },
+            {
+              "id": "sb-good-luck-tweet",
+              "name": "Good luck tweet",
+              "status": "solved",
+              "answer": "CASABLANCA, MOROCCO",
+              "confidence": 100,
+              "explanation": "First two letters of official names of each emoji shown in the 'good luck' slack message in the ad spell CASABLANCA",
+              "location": {"lat": 33.5731, "lng": -7.5898},
+              "hints": []
+            },
+            {
+              "id": "sb-door-dots",
+              "name": "Door dots",
+              "status": "solved",
+              "answer": "LAHORE, PAKISTAN",
+              "confidence": 100,
+              "explanation": "Overlaying the dots on each side of the door creates groups with no overlap. Counting the dots in each group per row gives periodic table numbers; the corresponding elements spell out the answer",
+              "location": {"lat": 31.5204, "lng": 74.3587},
+              "hints": []
+            },
+            {
+              "id": "sb-subtitles",
+              "name": "Subtitles",
+              "status": "solved",
+              "answer": "TALLINN, ESTONIA",
+              "confidence": 100,
+              "explanation": "The subtitles on the ad have dashes next to certain letters spelling SEVEN LETTER BIG LODGE, a pun on Tallinn ('tall inn').",
+              "location": {"lat": 59.4370, "lng": 24.7536},
+              "hints": []
+            },
+            {
+              "id": "sb-lasers",
+              "name": "Lasers",
+              "status": "solved",
+              "answer": "ARLES, FRANCE",
+              "confidence": 90,
+              "explanation": "There are 26 source nodes for the lasers, using A1Z26 in the order the lasers appear spells LASER MIXUP. Mixup is an anagram indicator; Arles is an anagram of laser.",
+              "location": {"lat": 43.6768, "lng": 4.6279},
+              "hints": []
+            },
+            {
+              "id": "sb-money-tube",
+              "name": "Money tube",
+              "status": "solved",
+              "answer": "TASHKENT, UZBEKISTAN",
+              "confidence": 100,
+              "explanation": "Counting the value of the money in each group pressed against the glass at the beginning of the video gives A1Z26 values of 'cash tent,' which spoonerizes to Tashkent.",
+              "location": {"lat": 41.2995, "lng": 69.2401},
+              "hints": []
+            },
+            {
+              "id": "sb-tank-barrel",
+              "name": "Tank barrel",
+              "status": "solved",
+              "answer": "NEW ORLEANS, LOUISIANA",
+              "confidence": 50,
+              "explanation": "I-[scream face] points to 'ice cream,' which leads to a video where Mr. Beast tries expensive ice creams. The number on the tank is the price on the receipt for a bananas foster ice cream; bananas foster is associated with New Orleans.",
+              "location": {"lat": 29.9511, "lng": -90.0715},
+              "hints": []
+            },
+            {
+              "id": "sb-grenade",
+              "name": "Grenade",
+              "status": "unsolved",
+              "answer": null,
+              "confidence": 0,
+              "explanation": "The ad contains a grenade labeled SMOKE with [squiggly]+1 = ?. This means the letters in 'Smoke' are likely not relevant, but we're not sure yet what the 'other' letters in question are.",
+              "location": null,
+              "hints": [
+                "Grenades demand to be taken literally.",
+                "SMOKE is just a type of grenade, but the other letters matter.",
+                "This answer has four parts."
+              ]
+            },
+            {
+              "id": "sb-monitor-unifying",
+              "name": "Monitor unifying puzzle",
+              "status": "unsolved",
+              "answer": null,
+              "confidence": 0,
+              "explanation": "The last hint suggests ternary. The main thing uniting the screens is the loading bar, which is a different color on each screen (and also loads a different amount)",
+              "location": null,
+              "hints": [
+                "There is a puzzle uniting all the screens.",
+                "Each screen has an element that is common to all the screens, but expressed in a different way.",
+                "Sometimes you don't get what you want. Sometimes you get a little. And sometimes you get everything."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bank-video",
+          "name": "Bank Video Puzzles",
+          "puzzles": [
+            {
+              "id": "bank-scribbles",
+              "name": "Scribbles + Marc Benioff",
+              "status": "solved",
+              "answer": "KANDI, BENIN",
+              "confidence": 90,
+              "explanation": "We 'mark BENI off,' meaning the letters covered by the scribble are 'BENI,' making BENIN. The letters on either side of J are 'I and K'; the fact that the J is backwards means we reverse this order to 'K and I,' to get Kandi.",
+              "location": {"lat": 11.1342, "lng": 2.9388},
+              "hints": []
+            },
+            {
+              "id": "bank-trenchcoat",
+              "name": "Trenchcoat + Calendar",
+              "status": "unsolved",
+              "answer": null,
+              "confidence": 0,
+              "explanation": "The calendar has dates circled, but some of them are ambiguous (at the bottom). From the screen we assembled an image of a trench coat; this suggests an ordering for a different set of 8 things. No great ideas yet on the Mrs. Maybelle hint.",
+              "location": null,
+              "hints": [
+                "If something is mixed up, mix it up.",
+                "Mrs. Maybelle isn't from around here."
+              ]
+            },
+            {
+              "id": "bank-candyland",
+              "name": "Candyland + Feastables",
+              "status": "solved",
+              "answer": "CAIRO, EGYPT",
+              "confidence": 100,
+              "explanation": "The screen rebuses to Candyland and gives us a series of spaces via the background colors. Finding the Feastables shirt worn by the guy at the end of the video on Mr Beast's merch store shows a phrase. If you index into the phrase with the number of spaces you would move on one of the common Candyland board after drawing the cards of the given colors, you get CAIRO.",
+              "location": {"lat": 30.0444, "lng": 31.2357},
+              "hints": []
+            },
+            {
+              "id": "bank-sin-wave",
+              "name": "Sin wave + withdrawal slip",
+              "status": "solved",
+              "answer": "LOWER HUTT, NEW ZEALAND",
+              "confidence": 100,
+              "explanation": "The numbers at the bottom of the check alternate between decreasing by 1 and increasing by 1 (with wraparound 0-1=9). Treating these numbers as a phone keypad cipher gives LOWER HUTT, NEW ZEALAND as the only valid option that can be spelled with letters from those keys in order.",
+              "location": {"lat": -41.2093, "lng": 174.9040},
+              "hints": []
+            },
+            {
+              "id": "bank-birds",
+              "name": "Birds on a wire + coffee cup",
+              "status": "solved",
+              "answer": "TBILISI, GEORGIA",
+              "confidence": 50,
+              "explanation": "The birds on a wire spell 'DINAMO.' The coffee cup clues Georgia (the state). These can potentially be put together to clue Tbilisi, the location of a football club called Dinamo in Georgia (the country).",
+              "location": {"lat": 41.7151, "lng": 44.8271},
+              "hints": []
+            },
+            {
+              "id": "bank-ear",
+              "name": "Ear + license plate + pirate",
+              "status": "unsolved",
+              "answer": null,
+              "confidence": 0,
+              "explanation": "Linked parts include a Kansas license plate 'IPESIT' on a tank and a billboard with a picture of a parrot and the text 'Talk Like a Pirate Day, September 19.' The bank screen has an ear + sound icon plus five blanks with a crossed-out T in the second position. This suggests removing a T from the second position of a five-letter word either before or after the homophone step.",
+              "location": null,
+              "hints": [
+                "You'll need an addition, a deletion, and a homophone in some order. One of those refers to a specific MrBeast video."
+              ]
+            },
+            {
+              "id": "bank-caesar",
+              "name": "Caesar heads + photo board",
+              "status": "solved",
+              "answer": "TIJUANA, MEXICO",
+              "confidence": 100,
+              "explanation": "The caesar head pattern gives you a pattern of backward/forward caesar shifts for a length 11 string. Doing this shift on 'The Best Bank' from the board gives the phrase 'Salad origin'; the Caesar salad originated in Tijuana.",
+              "location": {"lat": 32.5149, "lng": -117.0382},
+              "hints": []
+            },
+            {
+              "id": "bank-crosswalk",
+              "name": "Crosswalk + 7 images",
+              "status": "unsolved",
+              "answer": null,
+              "confidence": 0,
+              "explanation": "The images shown are a swing, a witch flying on a broomstick, an elephant, a door pediment (possibly a swan's neck pediment), a ninja holding a katana (with an arrow pointing to the sword), a Swiss flag, and a sweater. It connects to the crosswalk in the video, which may display the word 'DICE' when mirrored.",
+              "location": null,
+              "hints": [
+                "This puzzle is split into two parts that likely need to be united.",
+                "You'll want to put the half of the puzzle that isn't there in there."
+              ]
+            },
+            {
+              "id": "bank-sudoku",
+              "name": "Sudoku + 10^5",
+              "status": "solved",
+              "answer": "HAWAII",
+              "confidence": 10,
+              "explanation": "Different fingerprints get different sudokus, which we have found consistently cycle through the 25 different possible MinLex patterns. The most commonly found Sudoku has the number 271829, which is close to e*10^5. This puzzle also connects to a nine-line message in the bank video. Modulo indexing into each word with the digit from that cell in the sudoku, and taking cells 1-9 of e per row, gives letters that could spell 'HULA STATE.' The letters of 'Hawaii' can also be found in the center box of the grid. Unconfident since it doesn't involve 'connecting some grids' to each other.",
+              "location": {"lat": 21.3099, "lng": -157.8581},
+              "hints": [
+                "How many truly distinct puzzles of this type do you think there are? You won't need a million to figure out some solving patterns that might connect some grids to each other."
+              ]
+            },
+            {
+              "id": "bank-pennies",
+              "name": "Pennies + weight/hat",
+              "status": "solved",
+              "answer": "LINCOLN, NEBRASKA",
+              "confidence": 75,
+              "explanation": "The weight given is equivalent to 4,081 pennies (this step is confirmed by a hint). The city of Lincoln, Nebraska is located at latitude 40.81 and fits the theme of the top hat and pennies. Another possible answer is Doha, Qatar, based on the interpretation of A1Z26 giving D-zero-H-A.",
+              "location": {"lat": 40.8136, "lng": -96.7026},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "gifts",
+          "name": "Gifts",
+          "puzzles": [
+            {
+              "id": "gift-monika-jim",
+              "name": "Monika and Jim's gift",
+              "status": "solved",
+              "answer": "MONTREAL, CANADA",
+              "confidence": 90,
+              "explanation": "Ignoring the words at the bottom overlaid on the pocket, you can take letters from the left of the left words and the right of the right words in order (i.e. uniting the words in each row) to spell 'Montreal, Canada.' Only current concern is that we don't understand how this answer uses the hint 'Some solvers might think this puzzle is positively mad.'",
+              "location": {"lat": 45.5017, "lng": -73.5673},
+              "hints": []
+            },
+            {
+              "id": "gift-chris-hemsworth",
+              "name": "Chris Hemsworth's gift",
+              "status": "solved",
+              "answer": "QUEENSLAND, AUSTRALIA",
+              "confidence": 100,
+              "explanation": "Taking where each given highway meets US 101 gives a city, the first letters of those cities in order spell 'Land of Cairns.' Cairns is located in the state of Queensland.",
+              "location": {"lat": -20.9176, "lng": 142.7028},
+              "hints": []
+            },
+            {
+              "id": "gift-jack",
+              "name": "Jack's gift",
+              "status": "solved",
+              "answer": "DIVO, IVORY COAST",
+              "confidence": 100,
+              "explanation": "Reordering the cards into their correct positions gives the phrase 'City name found within the official title of this place.' A1Z26ing (with 27-52=1-26) the positions gives IVORY COAST; Divo is a city name contained within the official title of Cote D'Ivoire.",
+              "location": {"lat": 5.8372, "lng": -5.3569},
+              "hints": []
+            },
+            {
+              "id": "gift-pierson",
+              "name": "Pierson's gift",
+              "status": "solved",
+              "answer": "COPENHAGEN, DENMARK",
+              "confidence": 100,
+              "explanation": "'Blending' each pair of foods by taking letters from the end of the first and the beginning of the second makes a food minus one letter. Reading those missing letters down gives 'Hafnium city'; the element hafnium is named after the latin name for Copenhagen.",
+              "location": {"lat": 55.6761, "lng": 12.5683},
+              "hints": []
+            },
+            {
+              "id": "gift-botez",
+              "name": "Botez sisters' gift",
+              "status": "solved",
+              "answer": "BUFFALO, NEW YORK, USA",
+              "confidence": 100,
+              "explanation": "The remaining pieces at the end of the game in value order (kings worth zero), white before black, spells 'Buffalo' with the cipher provided in the video.",
+              "location": {"lat": 42.8864, "lng": -78.8784},
+              "hints": []
+            },
+            {
+              "id": "gift-unifying",
+              "name": "Unifying puzzle",
+              "status": "solved",
+              "answer": "SUCRE, BOLIVIA",
+              "confidence": 90,
+              "explanation": "The cipher in the background of the BTS image with the large gift box gives an ordering (left) and index (right). The layout matches the layout of images on the board shown in the bank, and the cipher gives the phrase 'a nice sugar.' Interpreting nice as 'Nice' (the city in France) suggests the French word for sugar, or Sucre.",
+              "location": {"lat": -19.0332, "lng": -65.2627},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "yt-tiktok",
+          "name": "YT/TikTok Shorts",
+          "puzzles": [
+            {
+              "id": "yt-red-items",
+              "name": "Red items from 'Rewatch this video'",
+              "status": "solved",
+              "answer": "QUITO, ECUADOR",
+              "confidence": 90,
+              "explanation": "Certain items in this video's background are red: a large KEY, the numbers on the basketball players' jerseys which A1Z26 to TWO, the word HECK in the bear's speech bubble, a pound sign above the boxers (QUID is a synonym for pound), and the DOOR. This can be read phonetically as 'Quito, Ecuador.'",
+              "location": {"lat": -0.1807, "lng": -78.4678},
+              "hints": []
+            },
+            {
+              "id": "yt-superbowl-tickets",
+              "name": "Superbowl tickets video",
+              "status": "solved",
+              "answer": "SOUTH POLE",
+              "confidence": 100,
+              "explanation": "There is a shot in the Tiktok video where the fan is holding the tickets down by her side and instead of the text shown earlier in the video, the text on the ticket reads 'South Pole.'",
+              "location": {"lat": -90.0, "lng": 0.0},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "hunt-site",
+          "name": "Hunt Site/Social Media",
+          "puzzles": [
+            {
+              "id": "hunt-tutorial",
+              "name": "Tutorial video",
+              "status": "solved",
+              "answer": "ANTANANARIVO, MADAGASCAR",
+              "confidence": 90,
+              "explanation": "There are symbols (dollar signs and dots) above the letters 'annawinamill.' Interpreting the dollar signs as representing correct letters and dots as representing incorrect letters leaves 'Antananarivo' as the only possible city that could fit.",
+              "location": {"lat": -18.8792, "lng": 47.5079},
+              "hints": []
+            },
+            {
+              "id": "hunt-elephant",
+              "name": "Elephant slack message",
+              "status": "solved",
+              "answer": "THANE, INDIA",
+              "confidence": 90,
+              "explanation": "A message in slack says that Okha the elephant 'ate $673,' where the dollar sign is actually a 5 with a line through it. Indexing 8, 5, 6, 7, 3 into 'ELEPHANT' gives the answer 'Thane.'",
+              "location": {"lat": 19.2183, "lng": 72.9781},
+              "hints": []
+            },
+            {
+              "id": "hunt-bear",
+              "name": "Bear video and math board",
+              "status": "solved",
+              "answer": "ITURUP",
+              "confidence": 100,
+              "explanation": "There is a board with math problems (with certain squares blank) in the background, with a submarine image superimposed on the briefcase in the corner. A hint confirms the sub = subscribers connection. Using the 9-digit subscriber count earlier in the video to fill in the 9 blanks leads to results for each row that equal 'ITURUP' in ASCII.",
+              "location": {"lat": 45.1047, "lng": 147.6383},
+              "hints": []
+            },
+            {
+              "id": "hunt-puzzlemaker",
+              "name": "Find a puzzlemaker Slack message",
+              "status": "solved",
+              "answer": "YELLOWKNIFE, CANADA",
+              "confidence": 100,
+              "explanation": "A series of numbers flashes across the puzzle piece in the 'Find a puzzle maker' slack message. Indexing into the puzzlemaker for the hunt, 'LONE SHARK GAMES' gives the phrase 'home area near Kam Lake.' Yellowknife is the only city near Kam Lake.",
+              "location": {"lat": 62.4540, "lng": -114.3718},
+              "hints": []
+            },
+            {
+              "id": "hunt-salesforce-underline",
+              "name": "Salesforce billboard underline",
+              "status": "solved",
+              "answer": "NOME, ALASKA",
+              "confidence": 100,
+              "explanation": "The underlined letters on the billboard are 'e nom'; a hint confirms the reversal to get Nome.",
+              "location": {"lat": 64.5011, "lng": -165.4064},
+              "hints": []
+            },
+            {
+              "id": "hunt-malcolm",
+              "name": "Malcolm",
+              "status": "solved",
+              "answer": "MAHIBADHOO, MALDIVES",
+              "confidence": 10,
+              "explanation": "Malcolm is shown 'diving' in a tank along with a weird poem-like message on the screen in Slack. 'Mal dives' gets us Maldives; reversing syllables from other words in the poem (like you might do to get from llama to Guate-mala or Malcolm to the camel in the background) and adding 'Ma' from Malcolm potentially gets Mahibadhoo. Confident about Maldives but not about the city part.",
+              "location": {"lat": 3.7565, "lng": 72.9697},
+              "hints": []
+            },
+            {
+              "id": "hunt-safe-dial",
+              "name": "Salesforce billboard safe dial",
+              "status": "solved",
+              "answer": "DIMTU, ETHIOPIA",
+              "confidence": 100,
+              "explanation": "The numbers along the dial are 4, 9, 13, 20, 21 which A1Z26es to Dimtu.",
+              "location": {"lat": 6.6667, "lng": 39.1167},
+              "hints": []
+            },
+            {
+              "id": "hunt-skyline",
+              "name": "Salesforce skyline puzzle",
+              "status": "solved",
+              "answer": "NAZARE, PORTUGAL",
+              "confidence": 100,
+              "explanation": "A video shared on X shows the Salesforce tower lighting up blue at specific intervals. Counting the exact number of seconds of each illumination (with 15s off representing letter boundaries and 30s off representing word breaks) gives numbers that A1Z26 to 'SURF RECORD SITE WITH ARGENT HUE.' The largest wave ever surfed and several other major surf records were set in Nazare, which is located on the Silver Coast in Portugal.",
+              "location": {"lat": 39.6003, "lng": -9.0692},
+              "hints": []
+            },
+            {
+              "id": "hunt-faq",
+              "name": "FAQ",
+              "status": "solved",
+              "answer": "GABORONE, BOTSWANA",
+              "confidence": 90,
+              "explanation": "The word 'one' appears in each paragraph of the FAQ, and indexing the 'one' position into the section title gives PRATEORTHIS (prate or this). Gab is a synonym for prate and 'this' could refer to 'one' which is emphasized as the key to the puzzle, giving Gaborone.",
+              "location": {"lat": -24.6282, "lng": 25.9231},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "lone-shark",
+          "name": "Lone Shark Social",
+          "puzzles": [
+            {
+              "id": "ls-podcast",
+              "name": "Hello, Puzzlers podcast",
+              "status": "solved",
+              "answer": "ILE DE LA POSSESSION",
+              "confidence": 100,
+              "explanation": "Each of the given words is mentioned in the podcast and refers to a specific synonym or example said explicitly in the podcast. Indexing into the new words spells Ile de la Possession.",
+              "location": {"lat": -46.4167, "lng": 51.75},
+              "hints": []
+            },
+            {
+              "id": "ls-reporter",
+              "name": "Central Puget Sound reporter",
+              "status": "solved",
+              "answer": "HEARD ISLAND",
+              "confidence": 100,
+              "explanation": "There are 11 words that are homophones of other words. Using the letter count of the words in the shark's blurb, indexing into the homophones spells Heard Island.",
+              "location": {"lat": -53.1, "lng": 73.5167},
+              "hints": []
+            },
+            {
+              "id": "ls-bgg",
+              "name": "Board Game Geek",
+              "status": "solved",
+              "answer": "GEORGETOWN, ASCENSION ISLAND",
+              "confidence": 100,
+              "explanation": "The ratings given are incorrect and the correct ratings for that day can be found in the stat history for each game on BGG. S and W are underlined, suggesting coordinates -- converting the differences in order into coordinates gives us Georgetown, Ascension Island.",
+              "location": {"lat": -7.9286, "lng": -14.4119},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "crossword",
+          "name": "Crossword",
+          "puzzles": [
+            {
+              "id": "crossword-1",
+              "name": "Crossword",
+              "status": "solved",
+              "answer": "EYJAFJALLAJOKULL, ICELAND",
+              "confidence": 100,
+              "explanation": "This is spelled out in a loop by the circled letters in the crossword. This also gives us the clue phrase 'TITANIC HOOP' for Stage 2.",
+              "location": {"lat": 63.6333, "lng": -19.6167},
+              "hints": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stage2",
+      "name": "Stage 2",
+      "sections": [
+        {
+          "id": "by-car",
+          "name": "By Car Rebus Puzzles",
+          "puzzles": [
+            {
+              "id": "car-barodynamics",
+              "name": "Barodynamics",
+              "status": "solved",
+              "answer": "CASPER, WYOMING, USA",
+              "confidence": 75,
+              "explanation": "We feel good about 'Oil City' as the rebus but there are several other cities that have this attested as a nickname -- Casper seems the most 'official.'",
+              "location": {"lat": 42.8501, "lng": -106.3252},
+              "hints": []
+            },
+            {
+              "id": "car-ebullioscope",
+              "name": "Ebullioscope",
+              "status": "solved",
+              "answer": "AYACUCHO, PERU",
+              "confidence": 50,
+              "explanation": "Ayacucho is known as the 'City of Churches' and is specifically known for having 33 churches, the number depicted in the image -- but other interpretations (such as 'Holy City' for Jerusalem) also still seem reasonable",
+              "location": {"lat": -13.1631, "lng": -74.2236},
+              "hints": []
+            },
+            {
+              "id": "car-furfuraceous",
+              "name": "Furfuraceous",
+              "status": "solved",
+              "answer": "BORNO, NIGERIA",
+              "confidence": 90,
+              "explanation": "'Home of peace' is the official nickname of the Borno region, present on their flag.",
+              "location": {"lat": 11.8333, "lng": 13.15},
+              "hints": []
+            },
+            {
+              "id": "car-hapaxanthous",
+              "name": "Hapaxanthous",
+              "status": "solved",
+              "answer": "BAKU, AZERBAIJAN",
+              "confidence": 90,
+              "explanation": "'City of Winds' is directly attested as the nickname of Baku, but this is similar to Chicago (the Windy City)",
+              "location": {"lat": 40.4093, "lng": 49.8671},
+              "hints": []
+            },
+            {
+              "id": "car-hekistotherm",
+              "name": "Hekistotherm",
+              "status": "solved",
+              "answer": "FORT MORGAN, COLORADO",
+              "confidence": 75,
+              "explanation": "'Christmas Capital of the Plains' is more attested as a nickname for Fort Morgan but there don't seem to be better options.",
+              "location": {"lat": 40.2503, "lng": -103.7999},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "by-horse",
+          "name": "By Horse Cryptic Puzzles",
+          "puzzles": [
+            {
+              "id": "horse-aberuncators",
+              "name": "Aberuncators",
+              "status": "solved",
+              "answer": "OKATO, NEW ZEALAND",
+              "confidence": 100,
+              "explanation": "From reclined.smokes.mazelike",
+              "location": {"lat": -39.0833, "lng": 173.9833},
+              "hints": []
+            },
+            {
+              "id": "horse-deambulatory",
+              "name": "Deambulatory",
+              "status": "solved",
+              "answer": "NOVA RUSSAS, BRAZIL",
+              "confidence": 100,
+              "explanation": "From headstart.anagram.griddled",
+              "location": {"lat": -4.7064, "lng": -40.5639},
+              "hints": []
+            },
+            {
+              "id": "horse-fissicostate",
+              "name": "Fissicostate",
+              "status": "solved",
+              "answer": "CESKE BUDEJOVICE, CZECHIA",
+              "confidence": 100,
+              "explanation": "From towers.decoder.models",
+              "location": {"lat": 48.9745, "lng": 14.4743},
+              "hints": []
+            }
+          ]
+        },
+        {
+          "id": "by-plane",
+          "name": "By Plane Geoguessr Puzzles",
+          "puzzles": [
+            {
+              "id": "plane-aboutsledges",
+              "name": "Aboutsledges",
+              "status": "solved",
+              "answer": "AMBANJA, MADAGASCAR",
+              "confidence": 100,
+              "explanation": "",
+              "location": {"lat": -13.6833, "lng": 48.45},
+              "hints": []
+            },
+            {
+              "id": "plane-absquatulate",
+              "name": "Absquatulate",
+              "status": "solved",
+              "answer": "SAINT-PIERRE, SAINT PIERRE AND MIQUELON",
+              "confidence": 100,
+              "explanation": "",
+              "location": {"lat": 46.7769, "lng": -56.1780},
+              "hints": []
+            },
+            {
+              "id": "plane-ectypography",
+              "name": "Ectypography",
+              "status": "solved",
+              "answer": "KRASNODAR, KRASNODARSKIY KRAY, RUSSIA",
+              "confidence": 100,
+              "explanation": "",
+              "location": {"lat": 45.0328, "lng": 38.9769},
+              "hints": []
+            },
+            {
+              "id": "plane-eleemosynary",
+              "name": "Eleemosynary",
+              "status": "solved",
+              "answer": "SAN MIGUEL DE TUCUMAN, TUCUMAN, ARGENTINA",
+              "confidence": 100,
+              "explanation": "",
+              "location": {"lat": -26.8241, "lng": -65.2226},
+              "hints": []
+            },
+            {
+              "id": "plane-epanostrophe",
+              "name": "Epanostrophe",
+              "status": "solved",
+              "answer": "DERBY, WESTERN AUSTRALIA",
+              "confidence": 100,
+              "explanation": "",
+              "location": {"lat": -17.3167, "lng": 123.65},
+              "hints": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

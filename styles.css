@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f5f6f7;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Map Section */
+.map-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#map {
+    height: 500px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.map-controls {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Puzzles Section */
+.puzzles-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stage {
+    margin-bottom: 40px;
+}
+
+.stage-title {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.section-stats {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.puzzle {
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #fafbfc;
+    border-left: 4px solid #e1e8ed;
+    border-radius: 4px;
+}
+
+.puzzle.solved {
+    border-left-color: #52c41a;
+}
+
+.puzzle.unsolved {
+    border-left-color: #ff4d4f;
+}
+
+.puzzle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.puzzle-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.puzzle-badges {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-status {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-status.unsolved {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.badge-confidence {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.badge-confidence.conf-100 {
+    background-color: #1565c0;
+    color: white;
+}
+
+.badge-confidence.conf-high {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.badge-confidence.conf-medium {
+    background-color: #ffa726;
+    color: white;
+}
+
+.badge-confidence.conf-low {
+    background-color: #ef5350;
+    color: white;
+}
+
+.puzzle-answer {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2e7d32;
+    margin: 10px 0;
+}
+
+.puzzle-answer.pending {
+    color: #c62828;
+    font-style: italic;
+}
+
+.puzzle-explanation {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.puzzle-hints {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
+    border-radius: 3px;
+}
+
+.puzzle-hints h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #856404;
+}
+
+.puzzle-hints ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.puzzle-hints li {
+    font-size: 13px;
+    color: #856404;
+    margin-bottom: 6px;
+    padding-left: 18px;
+    position: relative;
+}
+
+.puzzle-hints li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+}
+
+.toggle-explanation {
+    background: none;
+    border: none;
+    color: #1976d2;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 0;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.toggle-explanation:hover {
+    color: #1565c0;
+}
+
+.explanation-content {
+    display: none;
+}
+
+.explanation-content.visible {
+    display: block;
+}
+
+/* Section colors for map markers */
+.marker-playlist-setup { background-color: #8e44ad; }
+.marker-superbowl-ad { background-color: #3498db; }
+.marker-bank-video { background-color: #e74c3c; }
+.marker-gifts { background-color: #2ecc71; }
+.marker-yt-tiktok { background-color: #f39c12; }
+.marker-hunt-site { background-color: #1abc9c; }
+.marker-lone-shark { background-color: #9b59b6; }
+.marker-crossword { background-color: #34495e; }
+.marker-by-car { background-color: #e67e22; }
+.marker-by-horse { background-color: #16a085; }
+.marker-by-plane { background-color: #c0392b; }
+
+/* Leaflet marker customization */
+.custom-marker {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .puzzle-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .map-controls {
+        flex-direction: column;
+    }
+    
+    #map {
+        height: 400px;
+    }
+}

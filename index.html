@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Hunt Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Puzzle Hunt Progress Tracker</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- Map Section -->
+            <section class="map-section">
+                <h2>Location Map</h2>
+                <div class="map-controls">
+                    <div class="filter-group">
+                        <h3>Confidence Level</h3>
+                        <label><input type="checkbox" id="filter-high" checked> High/100% only</label>
+                        <label><input type="checkbox" id="filter-medium" checked> Medium (50-89%)</label>
+                        <label><input type="checkbox" id="filter-low" checked> Low (1-49%)</label>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Sections</h3>
+                        <div id="section-filters"></div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </section>
+
+            <!-- Puzzles List Section -->
+            <section class="puzzles-section">
+                <h2>Puzzles</h2>
+                <div id="puzzles-list"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
