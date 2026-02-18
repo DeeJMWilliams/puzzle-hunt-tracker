@@ -20,13 +20,45 @@ let markers = [];
 let puzzlesData = [];
 
 // Initialize
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
+    if (sessionStorage.getItem('authenticated')) {
+        document.getElementById('password-gate').style.display = 'none';
+        document.getElementById('main-content').style.display = '';
+        initApp();
+    } else {
+        setupPasswordGate();
+    }
+});
+
+function setupPasswordGate() {
+    const input = document.getElementById('password-input');
+    const error = document.getElementById('password-error');
+
+    const tryPassword = () => {
+        if (input.value === 'zetabeast') {
+            sessionStorage.setItem('authenticated', '1');
+            document.getElementById('password-gate').style.display = 'none';
+            document.getElementById('main-content').style.display = '';
+            initApp();
+        } else {
+            error.style.display = 'block';
+            input.value = '';
+            input.focus();
+        }
+    };
+
+    document.getElementById('password-submit').addEventListener('click', tryPassword);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') tryPassword(); });
+    input.focus();
+}
+
+async function initApp() {
     await loadData();
     initMap();
     renderPuzzles();
     renderTOC();
     setupFilters();
-});
+}
 
 // Load puzzle data
 async function loadData() {
